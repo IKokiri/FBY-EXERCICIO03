@@ -1,0 +1,23 @@
+Como organizar modelos em módulos?
+
+Podemos criar os modelos em módulos separados e importalos quando necessário.
+
+Como criar modelos com herança? De quais tipos?
+
+No nosso exercicio poderiamos incluir o nome do model a ser herdado em parenteses, por exemplo:
+class Animal(models.Model):
+...
+	
+class AnimalEstimacao(Animal):
+...
+
+TIPOS:
+Herança de Meta, Herança com Multi-Tabelas, Herança múltipla
+
+O que é, para quê serve e como usar um Proxy no modelo?
+
+Proxys são apontamentos. Todas as operações chamam o modelo original, como se o proxy estivesse fazendo a operação final. Imprementação no arquivo models.py
+
+O que faz o método __str__() em uma classe?
+
+Ele é ativo quando chamamo o str da classe é a finalidade e uma resposta mais amigável quando invocamos uma classe.

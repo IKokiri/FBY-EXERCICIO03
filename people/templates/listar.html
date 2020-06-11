@@ -1,0 +1,64 @@
+{% include "inicio.html" %}
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Idade</td>
+                <td>Nascimento</td>
+                <td>CPF</td>
+                <td>Editar</td>
+                <td>Deletar</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pessoa in lista %}
+            <tr>
+                <td>{{pessoa.nome}}</td>            
+                <td>{{pessoa.idade}}</td>            
+                <td>{{pessoa.data_nascimento}}</td>            
+                <td>{{pessoa.cpf}}</td>
+                <td>
+                    <a href="/people/editar/{{pessoa.id}}">Editar</a>
+                </td>
+                <td>
+                    <a href="/people/excluir/{{pessoa.id}}">Excluir</a>
+                </td>
+            </tr>
+        {% endfor %}    
+        </tbody>
+    </table>
+</div>
+
+<table border=1>
+    <tr>
+        <td>
+
+            No projeto da aula, crie pelo menos quatro queries customizadas. Use as informações em https://docs.djangoproject.com/en/3.0/topics/db/queries/ (Links para um site externo.)
+
+            <h3>RESULTADO QUERY CUSTOMIZADA 1</h3>
+            <h4>Todos</h4>
+            {%for l in listaa %}
+            {{l.nome}}
+            {%endfor%}
+            
+            <h3>RESULTADO QUERY CUSTOMIZADA 2</h3>
+            <h4>maiores 19 anos</h4>
+            {%for l in listab %}
+            {{l.nome}}
+            {%endfor%}
+
+
+            <h3>RESULTADO QUERY CUSTOMIZADA 3</h3>
+            <h4>UNIAO</h4>
+            {%for l in listac %}
+            {{l.nome}}
+            {%endfor%}
+
+            <h3>RESULTADO QUERY CUSTOMIZADA 3</h3>
+            <h4>COUNT</h4>
+            {{listad.0.total}}
+        </td>
+    </tr>
+</table>
+
